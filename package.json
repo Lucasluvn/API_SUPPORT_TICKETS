@@ -1,0 +1,22 @@
+{
+  "name": "api_support_tickets",
+  "version": "1.0.0",
+  "description": "API DE GERENCIA DE TICKETS DE SUPORTES",
+  "main": "src/server.js",
+  "type":"module",
+  "scripts": {
+    
+    "dev": "node --watch src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucasluvn/API_SUPPORT_TICKETS.git"
+  },
+  "author": "Lucas Vieira",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Lucasluvn/API_SUPPORT_TICKETS/issues"
+  },
+  "homepage": "https://github.com/Lucasluvn/API_SUPPORT_TICKETS#readme"
+}
