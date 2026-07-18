@@ -2,7 +2,7 @@ import {randomUUID} from "node:crypto"
 
 
 // colacando os parametros entre parentese eu posso passar los em qualquer ordem 
-export function create({request,response}) {
+export function create({request,response,database}) {
   const {equipment,description, user_name,
   } = request.body
 
@@ -15,5 +15,7 @@ export function create({request,response}) {
     created_at: new Date(),
     updated_at: new Date(),
 }
- return response.end(JSON.stringify(ticket))
+database.insert("tickets",ticket)
+
+ return response.writeHead(201).end(JSON.stringify(ticket))
 }
