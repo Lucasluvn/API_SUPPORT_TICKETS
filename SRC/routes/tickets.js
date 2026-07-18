@@ -2,6 +2,7 @@ import {create} from "../controllers/tickets/create.js"
 
 import { index } from "../controllers/tickets/index.js"
 
+import { update } from "../controllers/tickets/update.js"
 
 export const tickets = [
  { method:"POST",
@@ -12,8 +13,12 @@ controller: create,
 },
 { method:"GET",
   path: "/tickets",
-  // controller  vai executar alguma coisa quando essa rota for chamada
 controller: index,
+
+},
+{ method:"PUT",
+  path: "/tickets/:id",
+controller: update,
 
 }
   
