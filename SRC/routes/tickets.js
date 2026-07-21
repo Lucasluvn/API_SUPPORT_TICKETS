@@ -6,6 +6,8 @@ import { update } from "../controllers/tickets/update.js"
 
 import {updateStatus} from "../controllers/tickets/updateStatus.js"
 
+import { removeTickets } from "../controllers/tickets/removeTickets.js"
+
 export const tickets = [
  { method:"POST",
   path: "/tickets",
@@ -27,6 +29,11 @@ controller: update,
 { method:"PATCH",
   path: "/tickets/:id/close",
 controller: updateStatus,
+
+},
+{ method:"DELETE",
+  path: "/tickets/:id",
+controller: removeTickets,
 
 }
   
